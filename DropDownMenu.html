@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dropdown Menu</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Main Navigation Menu */
+        nav {
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 0px; /* Set border-radius to 0px */
+            transition: background-color 0.3s ease;
+        }
+        /* Updated Cursor Style for Menu Items */
+        nav ul li a:hover {
+            background-color: #45a049;
+            cursor: url('https://cdn.jsdelivr.net/gh/CalebJohn/slickness@1.0.0/slick-grab.cur'), auto;
+        }
+
+        /* Dropdown Menu */
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 10px;
+            list-style-type: none;
+            border-radius: 0px; /* Set border-radius to 0px */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 200px;
+        }
+        nav ul li ul li a {
+            color: white;
+            padding: 10px;
+            border-radius: 0px; /* Set border-radius to 0px */
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav ul li ul li a:hover {
+            background-color: #555;
+            cursor: url('https://cdn.jsdelivr.net/gh/CalebJohn/slickness@1.0.0/slick-grab.cur'), auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li ul {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+            }
+        }
+
+        /* Hover Effect on Menu Items */
+        nav ul li:hover a {
+            background-color: #45a049;
+            cursor: url('https://cdn.jsdelivr.net/gh/CalebJohn/slickness@1.0.0/slick-grab.cur'), auto;
+        }
+
+        /* New Cursor Style: Change cursor to Pointer (Hand) for clickable items */
+        nav ul li a:hover {
+            cursor: pointer; /* Default pointer cursor (Hand) */
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li>
+                <a href="#">Page</a>
+                <ul>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 4</a></li>
+                    <li><a href="#">Page 5</a></li>
+                    <li><a href="#">Page 6</a></li>
+                    <li><a href="#">Page 7</a></li>
+                    <li><a href="#">Page 8</a></li>
+                    <li><a href="#">Page 9</a></li>
+                    <li><a href="#">Page 10</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
